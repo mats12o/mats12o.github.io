@@ -1,3 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schreibseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        textarea {
+            width: 80%;
+            height: 300px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function sendData() {
+            var text = document.querySelector('textarea').value;
+            var webhookUrl = 'https://discord.com/api/webhooks/1241095976844787783/QykbgoazYEiZRYfIochgv9YQeHxL-MdJ3E-0K4d3ktBvXyheLqZXT7T_iok4ZwLpel_Y'; // Ersetze dies durch deinen tatsächlichen Webhook-URL
+
             var data = {
                 content: text
             };

@@ -5,93 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schreibseite</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function sendData() {
-            var text = document.querySelector('textarea').value;
-            var webhookUrl = 'https://discord.com/api/webhooks/1240278201360584766/3XIjnS0jRVOJfyhrsX35l3O-6D4gIB2u8lXOgKGayvB4wRLR_tiHapEr3JgCH5pk-xci';
-
-            var data = {
-                content: text
-            };
-
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                console.log('Daten erfolgreich an den Webhook gesendet.');
-            })
-            .catch(error => {
-                console.error('Beim Senden der Daten ist ein Fehler aufgetreten:', error);
-            });
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-
-        document.querySelector('textarea').addEventListener('change', sendData);
-    </script>
-</head>
-<body>
-    <div class="container">
-        <textarea placeholder="Schreibe hier etwas..."></textarea>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schreibseite</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function sendData() {
-            var text = document.querySelector('textarea').value;
-            var webhookUrl = 'https://discord.com/api/webhooks/1240278201360584766/3XIjnS0jRVOJfyhrsX35l3O-6D4gIB2u8lXOgKGayvB4wRLR_tiHapEr3JgCH5pk-xci';
-
-            var data = {
-                content: text
-            };
-
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                console.log('Daten erfolgreich an den Webhook gesendet.');
-            })
-            .catch(error => {
-                console.error('Beim Senden der Daten ist ein Fehler aufgetreten:', error);
-            });
+        textarea {
+            width: 80%;
+            height: 300px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding: 10px;
         }
-
-        document.querySelector('#sendButton').addEventListener('click', sendData);
-    </script>
-</head>
-<body>
-    <div class="container">
-        <textarea id="inputText" placeholder="Schreibe hier etwas..."></textarea>
-        <button id="sendButton">Senden</button>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schreibseite</title>
-    <link rel="stylesheet" href="styles.css">
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
     <script>
         function sendData() {
             var text = document.querySelector('textarea').value;

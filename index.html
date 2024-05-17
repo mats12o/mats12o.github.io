@@ -85,3 +85,45 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schreibseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function sendData() {
+            var text = document.querySelector('textarea').value;
+            var webhookUrl = 'DEIN_WEBHOOK_URL_HIER'; // Ersetze dies durch deinen tatsächlichen Webhook-URL
+
+            var data = {
+                content: text
+            };
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                console.log('Daten erfolgreich an den Webhook gesendet.');
+            })
+            .catch(error => {
+                console.error('Beim Senden der Daten ist ein Fehler aufgetreten:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <textarea id="inputText" placeholder="Schreibe hier etwas..."></textarea>
+        <button id="sendButton" onclick="sendData()">Senden</button>
+    </div>
+</body>
+</html>

@@ -26,3 +26,15 @@ textarea {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     resize: none;
 }
+/* Grüner Senden-Button */
+.button-3k0cO7.button-38aScr.lookFilled-1Gx00P.colorBrand-3pXr91.sizeMedium-2VGNaP {
+    background-color: #43b581 !important; /* Hintergrundfarbe */
+    border-color: #43b581 !important; /* Rahmenfarbe */
+    color: #fff !important; /* Textfarbe */
+}
+
+/* Hover-Effekt für den grünen Button */
+.button-3k0cO7.button-38aScr.lookFilled-1Gx00P.colorBrand-3pXr91.sizeMedium-2VGNaP:hover {
+    background-color: #3ca374 !important; /* Hintergrundfarbe beim Überfahren */
+    border-color: #3ca374 !important; /* Rahmenfarbe beim Überfahren */
+}

@@ -37,24 +37,4 @@ body {
     margin: 0;
 }
 
-.discord-container {
-    text-align: center;
-    background: #23272a;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.discord-container h2 {
-    margin-top: 0;
-    font-size: 24px;
-    color: #7289da;
-}
-
-.discord-widget {
-    margin-top: 20px;
-    border: 2px solid #7289da;
-    border-radius: 8px;
-    overflow: hidden;
-}
 
